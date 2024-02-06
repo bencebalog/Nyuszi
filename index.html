@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyuszi</title>
+
+    <style>
+        body{
+            background-color: aquamarine;
+            text-align: center;
+        }
+        #jatek{
+            background-color: white;
+            border: 1px solid black;
+            padding: 10px;
+            width: 0px auto;
+        }
+        img :hover{
+            background-color: #99ccff;
+        }
+        
+        
+    </style>
+
+    <script>
+
+        let t=[]
+        let html="";
+
+        function start(){
+            for(let s=0;s<9;s++){
+                t[s] = [];
+                for(let o=12;o<12;o++){
+                    t[s][o] = "repa"
+                    html +="<img src="+t[s][o]+"'.png'>"
+                }
+            }
+            document.getElementById("jatek").innerHTML += html
+        }
+
+    </script>
+</head>
+<body onload="start()">
+    
+    <div id="jatek"></div>
+    <img src="repa.png"> <span id="darabszam">0 darab</span> <img src="ujra.png" onclick="ujra()">
+</body>
+</html>
